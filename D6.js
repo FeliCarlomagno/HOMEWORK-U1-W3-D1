@@ -153,7 +153,15 @@ console.log(risultatoString);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function upperFirst(xxxx) {}
+function upperFirst(xxxx) {
+  return xxxx.charAt(0).toUpperCase() + xxxx.slice(1);
+}
+
+let stringaMaiusc = upperFirst(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+);
+
+console.log(stringaMaiusc);
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
