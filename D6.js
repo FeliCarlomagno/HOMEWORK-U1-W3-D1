@@ -29,6 +29,21 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum(x, y) {
+  let somma = x + y;
+  let somma2 = somma * 3;
+  if (x === y) {
+    console.log("i numeri sono uguali: ", somma2);
+  } else if (x !== y) {
+    console.log("i numeri sono diversi: ", somma);
+  }
+
+  return { somma: somma, somma2: somma2 };
+}
+
+const sommaXeY = crazySum(10, 10);
+
+console.log(sommaXeY);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -37,12 +52,43 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function crazyDiff(numero1, numero2) {
+  let differenza = numero1 - numero2;
+  let differenza2 = differenza * 3;
+  if (numero1 < 19) {
+    return differenza;
+  } else if (numero1 > 19) {
+    return differenza2;
+  }
+}
+
+const differenzanum1Enum2 = crazyDiff(10, 19);
+
+console.log(differenzanum1Enum2);
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function boundary(n) {
+  let risultato1 = "true";
+  let risultato2 = "false";
+
+  if (n >= 20 && n <= 100) {
+    return risultato1;
+  } else if (n === 400) {
+    return risultato1;
+  } else {
+    return risultato2;
+  }
+}
+
+const risultatonumero = boundary(500);
+
+console.log(risultatonumero);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -52,6 +98,20 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(stringa) {
+  let risultatoStringa = "EPICODE" + stringa;
+  let risultatoStringa2 = stringa;
+  if (stringa !== "EPICODE") {
+    return risultatoStringa;
+  } else if (stringa === "EPICODE") {
+    return risultatoStringa2;
+  }
+}
+
+let risultatoDiStringhe = epify("EPICODE");
+
+console.log(risultatoDiStringhe);
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -59,11 +119,32 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function check3and7(numeropositivo) {
+  let multiplo3 = "il numero è un  ultiplo di 3:";
+  let multiplo7 = "il numero è un multiplo di 7";
+  if (numeropositivo % 3 === 0) {
+    return multiplo3;
+  } else if (numeropositivo % 7 === 0) {
+    return multiplo7;
+  }
+}
+
+let numeroMultiplo = check3and7(343);
+
+console.log(numeroMultiplo);
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function reverseString(paramString) {
+  return paramString.split("").reverse().join("");
+}
+
+let risultatoString = reverseString("CIAO A TUTTI");
+console.log(risultatoString);
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -71,6 +152,8 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function upperFirst(xxxx) {}
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -84,3 +167,11 @@ console.log("area del mio rettangolo: ", areaRettangolo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(number) {
+  return Math.random() * 10;
+}
+
+let numeriRandom = giveMeRandom(1);
+
+console.log(numeriRandom);
